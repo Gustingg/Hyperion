@@ -1,0 +1,297 @@
+
+		/*
+		body{
+			background: linear-gradient(green, blue, yellow, grey, red, violet);
+		} 
+		
+		 
+		*/
+		
+		/*******************************
+		index */
+		header{
+			background: black;
+			color: white;
+		}
+		
+		#logo{
+			height: 100px;
+			margin: 5px 0px 0px 0px;
+			mask-repeat: repeat-x;
+		}
+		#nomesite{
+			float: right;
+			margin: 30px 400px 0px 0px;
+		}
+		
+		
+
+		#cabeçalho ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color:black;
+		  text-transform: uppercase;
+		}
+		
+		#cabeçalho li {
+		  float: left;
+		}
+		
+		#cabeçalho li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 13px 16px;
+		  text-decoration: none;
+		}
+		
+		#cabeçalho li a:hover:not(.active) {
+		  background-color: rgb(25, 192, 89);
+		}
+		
+		#imagem1 img {
+		float: right;
+		}
+
+        #imagem1  {
+			width:45%;
+			height:300px;
+			margin-left:15px;
+			float: right;
+			margin-top: 35px;
+		}
+        p {
+            text-align: left;
+        }
+		#cabeçalho .login {
+			float: right;
+			padding: 1px;
+			text-align: center;
+		}
+		#conteudo1 {
+			font-size: large;
+			text-align: left;
+			max-width: 52%;
+			margin: 120px 20px;
+			font-size: 60px;
+		}
+		#container1 {
+			border-bottom: gray dotted 1px;
+			border-top: dotted white 1px;
+		}
+		#container2{
+			margin-top: 55px;
+			margin-bottom: 120px;
+		}
+		#container2 h2{
+			margin: 10px 10px;
+			font-size: 50px;
+			text-align: center;
+			max-width: 45%;
+		}
+		#conteudo2{
+			max-width: 45%;
+			font-size: 35px;
+			margin: 30px 20px;
+			max-height: 500px;
+		}
+		#imagem2 {
+			float:right;
+			width:500px;
+			height:300px;
+			margin-top: -50px;
+		}
+		#container3{
+			border-top: gray dotted 1px;
+		}
+		#container3 h2 {
+			font-size: 30px;
+			text-align: center
+		}
+
+		.listas{
+			list-style-type: circle;
+			float: left;
+			text-indent: 2px;
+			font-size: 19px;
+		}
+		/*Rodape*/
+		#container-rodape {
+			background: black;
+			padding: 20px;
+			margin-top: 20px;
+		}
+
+		#rodape {
+			width: 750px;
+			margin: 0 auto;
+			color: #fff;
+		}
+		/*******************************
+		Fim index*/
+		
+		/*******************************
+		Começo cadastre */
+		#container4{
+			border: black solid 5px;
+			margin: 150px;
+			margin-top: 200px;
+			padding: 30px;
+			background-color: green;
+			border-radius: 50px;
+			
+		}
+		#contratar{
+			float: right;
+			background: green;
+
+		}
+		
+		#container4 a:link, a:visited {
+			background-color: black;
+			color: white;
+			padding: 14px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+		  }
+		  
+		  #container4 a:hover, a:active {
+			background-color: rgb(54, 21, 36);
+		  }
+
+		/*******************************
+		Fim cadastre */
+		
+		/*******************************
+		Começo cadastro empresa e cliente */
+		body{
+			font-family: "Trebuchet MS", Helvetica, sans-serif;
+		}
+
+		fieldset {
+			margin: 1em 0;
+			padding: 1em;
+			border: 1px solid #ccc;
+			background: #f8f8f8;
+		}
+
+		legend {
+			font-weight: bold;
+		}
+
+		label {
+			display: block;
+			cursor: pointer;
+		}
+		.submit2{
+			margin-top: 8px;
+		}
+		/*******************************
+		Fim cadastro empresa e cliente*/
+
+		/*******************************
+		entrar */
+		
+	
+		/*******************************
+			Fim entrar */
+
+		/*******************************
+			empresa */	
+		#container6 img{
+				width: 99%;
+				align-items: center;
+		}
+		#container6 h1{
+			font-size: 38px;
+			text-align: center;
+		}
+		.valores{
+			font-weight: bolder;
+			font-size: 18px;
+		}
+		
+		/*******************************
+			fim empresa */
+
+		/*******************************
+			COMO FUNCIONA */
+		.container9{
+			/*border: 1px solid red;*/
+			border-bottom: 1px gray dotted;
+			padding: 10px 5px 15px 25px;
+		}
+		.passos{
+			font-weight: bolder;
+			font-size: 17px;
+		}
+		/*******************************
+			FIM como funciona */
+
+		/*******************************
+			portifolio */
+		
+		.prototipo{
+			max-width: 100%;
+		}
+
+		.vejamais{
+			color:black;
+			text-decoration: none;
+		}
+		#conteudo3 {
+			height: 2500px;
+			display: flex;
+
+			/*
+			row|row-reverse|column|column-reverse 
+			*/
+			flex-direction: row ;
+
+			/*
+			nowrap|wrap|wrap-reverse
+			*/
+			flex-wrap: wrap ;
+
+			/*
+			flex-start|flex-end|center|space-between|space-around
+			*/
+			justify-content: space-around ;
+
+			/*
+			stretch|center|flex-start|flex-end|baseline
+			*/
+			align-items: baseline ;
+
+		}
+		.item2 {
+				margin: 5px;
+				background: white;
+				border: 1px dotted gray;
+				padding: 0px 8px;
+				max-width: 30%;
+			}
+
+		/*******************************
+		fim portifolio */
+
+		/*******************************
+			contato */
+		#mapa{
+			margin: 15px ;
+			display: flex;
+		}
+		.item{
+			margin: 15px;
+		}
+
+
+		.por{
+			display: flex;
+			margin: 5px;
+		}
+
+
