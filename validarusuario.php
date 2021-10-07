@@ -21,7 +21,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
 
         $result = $sql->fetch();
         $_SESSION['username']=$result['razaosocial'];
-        header('Location: pedidosdosclientes.php');
+        header('Location: index.php');
     }
 }else {
     echo "campos não ok";

@@ -1,0 +1,26 @@
+:root {
+    --maincolor: #0b5ed7;
+}
+
+#logo{
+    height: 4rem;			
+}
+
+.homepage-img{
+    width: 35rem;
+}
+
+.homepage-title{
+    color: var(--maincolor);
+}
+
+.homepage-icons{
+    font-size: 35px;
+    color: var(--maincolor);
+}
+
+.homepage-cases{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
