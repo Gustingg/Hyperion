@@ -1,4 +1,8 @@
-<?php include './shared/header.php'?>
+<?php 
+	session_start();
+	$_SESSION['pageTitle'] = 'Home';
+	include './shared/header.php';	
+?>
 
 	<div class="container my-5">
 		<div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">

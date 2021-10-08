@@ -24,3 +24,7 @@
     background-repeat: no-repeat;
     background-blend-mode: overlay;
 }
+
+.form-style{
+    width: 50rem;
+}

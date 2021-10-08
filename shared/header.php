@@ -7,10 +7,7 @@
 	<link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-icons/bootstrap-icons.css">
-	<title>Home</title>
-	<?php 
-		session_start();	
-	?>
+	<title><?php echo $_SESSION['pageTitle'] ?></title>
 </head>
 <body>
     <div class="container">
@@ -26,7 +23,7 @@
                 <?php
                 if(isset($_SESSION['username']))
                     {
-                        echo "<li><a href='pedido.php' class='nav-link px-2 link-dark'>Fazer Pedido</a></li>";
+                        echo "<li><a href='pedidosdosclientes.php' class='nav-link px-2 link-dark'>Pedidos</a></li>";
                     }
                 ?>
                 <li><a href="contato.html" class="nav-link px-2 link-dark">Contato</a></li>
