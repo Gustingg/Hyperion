@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/bootstrap-icons/bootstrap-icons.css">
 	<title><?php echo $_SESSION['pageTitle'] ?></title>
+    <?php $arrayCateg = ['Desenvolvimento de Sites', 'Estratégia de Marketing Digital', 'Machine Learning', 'Criação/Repaginação de Aplicativo Mobile (Android / IOS)s', 'Big Data', 'IA', 'ChatBot', 'Assistente Virtual Inteligente', 'Cibersegurança', 'Software de Gestão Empresarial']; ?>
 </head>
 <body>
     <div class="container">
@@ -34,7 +35,86 @@
                     if(!isset($_SESSION['username']))
                     {
                         echo "<a role='button' class='btn btn-primary me-2' href='entrar.php'>Login</a>";
-                        echo "<a role='button' class='btn btn-outline-primary' href='cadastre.html'>Cadastrar</a>";
+                        echo "<button type='button' class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Cadastrar</button>";
+                        echo "<div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+                        <div class='modal-dialog'>
+                          <div class='modal-content'>
+                            <div class='modal-header'>
+                              <h5 class='modal-title' id='exampleModalLabel'>Cadastrar</h5>
+                              <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                            </div>
+                            <form name='form3' action='cadastrarcliente.php' method='post'>
+                                <div class='modal-body'>
+                                    <div class='mb-2'>
+                                        <label for='nomeRazaoSocial' class='form-label'>Nome/Razão Social:</label>
+                                        <input class='form-control' type='text' name='nomeRazaoSocial' required autofocus>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label for='cpf/ cnpj'>CPF/CNPJ:</label>
+                                        <input class='form-control' type='text' name='cpfCnpj' required>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label for='endereço'>Endereço:</label>
+                                        <input class='form-control' type='text' name='endereco' required placeholder='ex: rua, número, bairro'>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label for='email'>Email:</label>
+                                        <input class='form-control' type='email' name='email' required>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label for='telefone'>Telefone:</label>
+                                        <input class='form-control' type='tel' name='telefone' required>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label for='senha'>Senha:</label>
+                                        <input class='form-control' type='senha' name='senha' required>
+                                    </div>
+                                    <div class='mb-2'>
+                                        <label>Categorias:</label>
+                                        <div class='btn-group' role='group' aria-label='Grupo '>";
+                                        $i = 0;
+                                            foreach ($arrayCateg as &$categ){
+                                                echo'
+                                                    <input  type="checkbox" class="btn-check" autocomplete="off" name="categorias[]" value="'.$categ.'" id="'.$categ.'">
+                                                    <label class="btn btn-outline-primary" for="'.$categ.'">
+                                                        '.$categ.'
+                                                    </label>';
+                                                    if (($i % 3) == 0)
+                                                        echo '<br/>';
+                                                $i++;
+                                            };
+                                        echo"</div>
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Desenvolvimento de Sites
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Estratégia de Marketing Digital
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Machine Learning
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Criação/Repaginação de Aplicativo Mobile (Android / IOS)
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Big Data
+                                            <br>
+                                            <input type='checkbox' name='interesses'> IA
+                                            <br>
+                                            <input type='checkbox' name='interesses'> ChatBot
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Assistente Virtual Inteligente 
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Cibersegurança
+                                            <br>
+                                            <input type='checkbox' name='interesses'> Software de Gestão Empresarial 
+                                            <br>
+                                    </div>
+                                </div>
+                                <div class='modal-footer'>
+                                <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                                <button type='button' class='btn btn-primary'>Save changes</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>";
                     }
                     else
                     {

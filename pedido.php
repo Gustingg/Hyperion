@@ -1,7 +1,6 @@
 <?php
         session_start();
         isset($_GET['acao']) && $_GET['acao'] == 'editar' ? $_SESSION['pageTitle'] = 'Editar Pedido' : $_SESSION['pageTitle'] = 'Cadastrar Pedido';
-        $arrayCateg = ['Desenvolvimento de Sites', 'Estratégia de Marketing Digital', 'Machine Learning', 'Criação/Repaginação de Aplicativo Mobile (Android / IOS)s', 'Big Data', 'IA', 'ChatBot', 'Assistente Virtual Inteligente', 'Cibersegurança', 'Software de Gestão Empresarial'];
 	    include './shared/header.php';	
         if(isset($_GET['acao']) && $_GET['acao'] == 'editar'){
             require_once "conexao.php";
