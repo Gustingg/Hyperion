@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 29-Nov-2021 às 12:57
+-- Tempo de geração: 01-Dez-2021 às 00:41
 -- Versão do servidor: 5.7.31
 -- versão do PHP: 7.3.21
 
@@ -120,15 +120,17 @@ CREATE TABLE IF NOT EXISTS `pedido` (
   `titulo` varchar(255) NOT NULL,
   `descricao` varchar(255) NOT NULL,
   `categorias` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `id_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_id_usuario` (`id_usuario`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `pedido`
 --
 
-INSERT INTO `pedido` (`id`, `titulo`, `descricao`, `categorias`) VALUES
-(9, 'The Unseen Ones', 'asdw', 'EstratÃ©gia de Marketing Digital');
+INSERT INTO `pedido` (`id`, `titulo`, `descricao`, `categorias`, `id_usuario`) VALUES
+(9, 'The Unseen Ones', 'asdw', 'EstratÃ©gia de Marketing Digital', 0);
 
 -- --------------------------------------------------------
 

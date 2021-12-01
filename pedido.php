@@ -6,7 +6,7 @@
             require_once "conexao.php";
             $dbh = DBConnection::get();
             $x = $_GET['id'];
-            $stmt = $dbh->prepare("SELECT * FROM pedido WHERE id = $x" );
+            $stmt = $dbh->prepare("SELECT * FROM pedido");
             $stmt->execute();
             $dados = $stmt->fetch(PDO::FETCH_ASSOC); 
 

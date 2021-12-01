@@ -12,7 +12,8 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
     
     $result = $sql->fetch();
     if($result != null){
-        $_SESSION['username']=$result['nomeRazaoSocial'];
+        $_SESSION['id']=$result['id'];
+        $_SESSION['usernameCli']=$result['nomeRazaoSocial'];
         header('Location: pedido.php');
     }
     else{
@@ -20,7 +21,8 @@ if(isset($_POST['email']) && isset($_POST['senha'])){
         $sql->execute();
 
         $result = $sql->fetch();
-        $_SESSION['username']=$result['razaosocial'];
+        $_SESSION['id']=$result['id'];
+        $_SESSION['usernameEmp']=$result['razaosocial'];
         header('Location: index.php');
     }
 }else {

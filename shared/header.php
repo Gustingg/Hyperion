@@ -22,7 +22,7 @@
                 <li><a href="comofunciona.html" class="nav-link px-2 link-dark">Como Funciona</a></li>
                 <li><a href="portifolio.html" class="nav-link px-2 link-dark">Portifólio</a></li>
                 <?php
-                if(isset($_SESSION['username']))
+                if(isset($_SESSION['usernameCli']) || isset($_SESSION['usernameEmp']))
                     {
                         echo "<li><a href='pedidosdosclientes.php' class='nav-link px-2 link-dark'>Pedidos</a></li>";
                     }
@@ -32,7 +32,7 @@
 
             <div class="col-md-3 text-end">
                 <?php
-                    if(!isset($_SESSION['username']))
+                    if(!isset($_SESSION['usernameCli']) && !isset($_SESSION['usernameEmp']))
                     {
                         echo "<a role='button' class='btn btn-primary me-2' href='entrar.php'>Login</a>";
                         echo "<button type='button' class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Cadastrar</button>";
@@ -119,7 +119,14 @@
                     else
                     {
                         echo"<div style='display: inline-flex;'>
-                                <a class='nav-link px-2 link-dark'>Olá, ".$_SESSION['username']."</a>
+                                <a class='nav-link px-2 link-dark'>Olá, ";
+                        if(isset($_SESSION['usernameCli'])){
+                            echo $_SESSION['usernameCli'];
+                        }
+                        else{
+                            echo $_SESSION['usernameEmp'];
+                        }
+                        echo "</a>
                                 <a role='button' href='sair.php' class='btn btn-outline-primary'>Sair</a>
                             </div>";  
                     }
