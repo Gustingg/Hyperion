@@ -46,7 +46,8 @@
             }
         }
         else{
-            echo "</tr><tr><td colspan='5'><p style='text-align-last: center;'>Ops... Parece que não temos nenhum pedido ainda.</p></td></tr>";
+            echo "<td><a class='btn btn-success' href='responder.php?id=".$registro['id']."'><i class='bi bi-reply'></i></a> 
+                    </tr><tr><td colspan='5'><p style='text-align-last: center;'>Ops... Parece que não temos nenhum pedido ainda.</p></td></tr>";
         }
     }
     else if (isset($_SESSION['usernameCli'])){

@@ -15,5 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
 
   $sth->execute();
+  header('Location: entrar.php');
 }
 ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Dez-2021 às 00:41
+-- Tempo de geração: 01-Dez-2021 às 12:56
 -- Versão do servidor: 5.7.31
 -- versão do PHP: 7.3.21
 
@@ -92,7 +92,14 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `senha` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cnpj` (`cnpj`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `empresa`
+--
+
+INSERT INTO `empresa` (`id`, `razaosocial`, `cnpj`, `endereco`, `email`, `telefone`, `senha`) VALUES
+(1, 'Arroy', '44444444444444', 'asdw', 'email@email.com', '17999998586', '486684');
 
 -- --------------------------------------------------------
 
@@ -130,7 +137,26 @@ CREATE TABLE IF NOT EXISTS `pedido` (
 --
 
 INSERT INTO `pedido` (`id`, `titulo`, `descricao`, `categorias`, `id_usuario`) VALUES
-(9, 'The Unseen Ones', 'asdw', 'EstratÃ©gia de Marketing Digital', 0);
+(9, 'The Unseen Ones', 'asdw', 'EstratÃ©gia de Marketing Digital', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pedidos_resposta`
+--
+
+DROP TABLE IF EXISTS `pedidos_resposta`;
+CREATE TABLE IF NOT EXISTS `pedidos_resposta` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_cliente` int(11) NOT NULL,
+  `id_empresa` int(11) NOT NULL,
+  `id_pedido` int(11) NOT NULL,
+  `resposta` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_id_cliente` (`id_cliente`),
+  KEY `FK_id_empresa` (`id_empresa`),
+  KEY `FK_id_pedido` (`id_pedido`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 

@@ -35,7 +35,7 @@
                     if(!isset($_SESSION['usernameCli']) && !isset($_SESSION['usernameEmp']))
                     {
                         echo "<a role='button' class='btn btn-primary me-2' href='entrar.php'>Login</a>";
-                        echo "<button type='button' class='btn btn-secondary' data-bs-toggle='modal' data-bs-target='#exampleModal'>Cadastrar</button>";
+                        echo "<a role='button' class='btn btn-primary me-2' href='cadastre.html'>Cadastrar</a>";
                         echo "<div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
                         <div class='modal-dialog'>
                           <div class='modal-content'>
@@ -75,7 +75,7 @@
                                         $i = 0;
                                             foreach ($arrayCateg as &$categ){
                                                 echo'
-                                                    <input  type="checkbox" class="btn-check" autocomplete="off" name="categorias[]" value="'.$categ.'" id="'.$categ.'">
+                                                    <input  type="checkbox" class="btn-check" autocomplete="off" name="categorias[]" value="'.$categ.'" id="'.$categ.'"> 
                                                     <label class="btn btn-outline-primary" for="'.$categ.'">
                                                         '.$categ.'
                                                     </label>';
