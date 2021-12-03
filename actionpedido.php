@@ -10,8 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_GET['acao'] != 'edit') {
   $sth->bindParam(':titulo', $_POST['titulo']);
   $sth->bindParam(':descricao', $_POST['descricao']);
   $sth->bindParam(':categorias', $_POST['categorias']);
-
-  print_r($_POST['categorias']);
   
   $sth->execute() ? $_SESSION['status'] = 1 : 2;
 

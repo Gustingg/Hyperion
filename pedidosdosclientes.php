@@ -46,8 +46,7 @@
             }
         }
         else{
-            echo "<td><a class='btn btn-success' href='responder.php?id=".$registro['id']."'><i class='bi bi-reply'></i></a> 
-                    </tr><tr><td colspan='5'><p style='text-align-last: center;'>Ops... Parece que não temos nenhum pedido ainda.</p></td></tr>";
+            echo "<tr><td colspan='5'><p style='text-align-last: center;'>Ops... Parece que não temos nenhum pedido ainda.</p></td></tr>";
         }
     }
     else if (isset($_SESSION['usernameCli'])){
@@ -56,7 +55,9 @@
                 echo "<tr><td>".$registro['id']."</td>";
                 echo "<td>".$registro['titulo']."</td>";
                 echo "<td>".$registro['descricao']."</td>";
-                echo "<td>".$registro['categorias']."</td>";
+                echo "<td>".$registro['categorias']."</td>
+                      <td><a class='btn btn-success' href='resposta.php?id=".$registro['id']."'><i class='bi bi-reply'></i></a></td>
+                      </tr>";
             }
         }
         else{
